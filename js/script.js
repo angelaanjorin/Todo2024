@@ -1,4 +1,4 @@
-const sortBtn = document.getItemById('#sortBtn');
+
 
 window.addEventListener('load', () => {
     todos = JSON.parse(localStorage.getItem('todos')) || [];
@@ -123,12 +123,14 @@ function DisplayTodos() {
         })
 
     })
-    function sortEntry() {
-        todoList.sort((a, b) => {
-            let aDate = Date.parse(a.date);
-            let bDate = Date.parse(b.date);
-            return aDate - bDate;
-        });
+    //const sortBtn = document.getItemById('#sortBtn');
+
+    function sortEntry(){
+    todos.sort(function(a,b){
+        return new Date(b.date) - new Date(a.date);
+      });
+      DisplayTodos()
     }
+      
 
 }
