@@ -59,14 +59,6 @@ function DisplayTodos() {
         edit.classList.add("material-icons");
         deleteButton.classList.add("material-icons", "remove-btn");
 
-        // let dateObj = new Date();
-        // let formattedDate = dateObj.toLocaleString("en-US", {
-        //     day : "numeric",
-        //     month:"long",
-        //     year: "numeric"
-        // });
-        // console.log(formattedDate);
-
         content.innerHTML = `<input type="text" value="${todo.content}" readonly>`;
         dateElem.innerHTML = `<input type="date" value="${todo.date}" readonly>`;
         edit.innerText = 'edit';
@@ -125,8 +117,7 @@ function DisplayTodos() {
 
     })
 
-    sortBtn.addEventListener('click', sortEntry, false);
-    function sortEntry() {
+    sortBtn.addEventListener('click', (e) => {
         todos.sort((a, b) => {
             let aDate = Date.parse(a.date);
             let bDate = Date.parse(b.date);
@@ -136,27 +127,12 @@ function DisplayTodos() {
     todoList.innerHTML = "";
     DisplayTodos()
 
-    }
+    })
 
-    incomplete.addEventListener('change', incompleteFirst, false);
 
-  function incompleteFirst(){
-    const todoList = document.querySelector('#todo-list');
-    todoList.innerHTML = "";
-    
-    if(incomplete.checked){
-        let resultArray = [];
-
-        let filteredIncompleteArray = todos.filter(todo => todo.done == false);
-        //filteredIncompleteArray.forEach();
-
-        filteredDoneArray = todos.filter(todo => todo.done == true);
-        //filteredDoneArray.forEach();
-    } else {
-        resultArray = [...filteredIncompleteArray, ...filteredDoneArray];
-        DisplayTodos(resultArray);
-      }
-
-        DisplayTodos(todos);
-    }
+    pendingBtn.addEventListener('click', (e) => {
+    let pendingArray = todos.filter(todo => todo.done == false);
+        DisplayTodos(pendingArray);
+   
+    })
   }  
