@@ -204,7 +204,9 @@ input:checked ~ .bubble::after {
 .todo-date {
 	color: var(--dark);
 	font-size: 1.125rem;
+    cursor: pointer;
 }
+
 .todo-item .actions {
 	display: flex;
 	align-items: center;

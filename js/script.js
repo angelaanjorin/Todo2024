@@ -4,20 +4,13 @@ window.addEventListener('load', () => {
     //let dateValue = dateInput.value;
     //dateInput.value ="";
 	const newTodoForm = document.querySelector('#new-todo-form');
-    
-    //let dateObj = new Date(date);
-    //let formattedDate = dateObj.toLocaleString("en-US", {
-      //  month:"long",
-       // day : "numeric",
-       // year: "numeric"
-    //});
         
 	newTodoForm.addEventListener('submit', e => {
 		e.preventDefault();
 
 		const todo = {
 			content: e.target.elements.content.value,
-            date: e.target.elements.dateValue,
+            date: e.target.elements.dateInput.value,
 			category: e.target.elements.category.value,
 			done: false,
 			createdAt: new Date().getTime()
@@ -48,7 +41,7 @@ function DisplayTodos () {
 		const input = document.createElement('input');
 		const span = document.createElement('span');
 		const content = document.createElement('div');
-        const dateElem = document.createElement('input')
+        const dateElem = document.createElement('div')
 		const actions = document.createElement('div');
 		const edit = document.createElement('button');
 		const deleteButton = document.createElement('button');
@@ -67,8 +60,16 @@ function DisplayTodos () {
 		edit.classList.add("material-icons");
 		deleteButton.classList.add("material-icons", "remove-btn");
 
+        // let dateObj = new Date();
+        // let formattedDate = dateObj.toLocaleString("en-US", {
+        //     day : "numeric",
+        //     month:"long",
+        //     year: "numeric"
+        // });
+        // console.log(formattedDate);
+
 		content.innerHTML = `<input type="text" value="${todo.content}" readonly>`;
-        dateElem.innerText = `<input type="date" value="${todo.date}" readonly>`;
+        dateElem.innerHTML = `<input type="date" value="${todo.date}" readonly>`;
 		edit.innerText = 'edit';
 		deleteButton.innerText = 'remove_circle';
 
