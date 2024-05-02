@@ -68,6 +68,7 @@ h3 {
 	display: block;
 	width: 100%;
 	font-size: 1.125rem;
+	background: #FFF;
 	padding: 1rem 1.5rem;
 	border-radius: 0.5rem;
 	box-shadow: var(--shadow);
@@ -172,17 +173,21 @@ input:checked ~ .bubble::after {
 .create-todo input[type="submit"]:hover {
 	opacity: 0.75;
 }
+.sorting{
+	margin: 1rem;
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
 
-#sortBtn {
-    display: block;
-	width: 50%;
+}
+#sortBtn, #pendingBtn, #revertBtn {
+	width: 30%;
 	font-size: 1.125rem;
-	padding: 1rem 1.5rem;
+	padding: 1rem;;
 	color: #FFF;
 	font-weight: 700;
 	text-transform: uppercase;
 	background-color:#3a82ee;
-	box-shadow: var(--businnes-glow);
 	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: 0.2s ease-out; 
@@ -250,7 +255,7 @@ input:checked ~ .bubble::after {
 	opacity: 0.8;
 }
 
-.actions button.remove-btn {
+.actions button.remove-btn{
 	color: crimson;
 }
 
