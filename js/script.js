@@ -128,7 +128,11 @@ function DisplayTodos() {
             let aDate = Date.parse(a.date);
             let bDate = Date.parse(b.date);
             return aDate - bDate;
-        });
+        })
+        const todoList = document.querySelector('#todo-list');
+    todoList.innerHTML = "";
+    DisplayTodos()
+    
     }
     
     //const sortBtn = document.getItemById('#sortBtn');
