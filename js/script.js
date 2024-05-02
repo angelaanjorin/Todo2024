@@ -22,10 +22,10 @@ window.addEventListener('load', () => {
         // Reset the form
         e.target.reset();
 
-        DisplayTodos()
+        DisplayTodos(todos)
     })
 
-    DisplayTodos()
+    DisplayTodos(todos)
 })
 
 function DisplayTodos() {
@@ -101,7 +101,8 @@ function DisplayTodos() {
 
         })
 
-        sortBtn.addEventListener('click', sortEntry, false);
+        
+
 
         edit.addEventListener('click', (e) => {
             const input = content.querySelector('input');
@@ -123,6 +124,8 @@ function DisplayTodos() {
         })
 
     })
+
+    sortBtn.addEventListener('click', sortEntry, false);
     function sortEntry() {
         todos.sort((a, b) => {
             let aDate = Date.parse(a.date);
@@ -132,17 +135,28 @@ function DisplayTodos() {
         const todoList = document.querySelector('#todo-list');
     todoList.innerHTML = "";
     DisplayTodos()
-    
+
     }
+
+    incomplete.addEventListener('change', incompleteFirst, false);
+
+  function incompleteFirst(){
+    const todoList = document.querySelector('#todo-list');
+    todoList.innerHTML = "";
     
-    //const sortBtn = document.getItemById('#sortBtn');
+    if(incomplete.checked){
+        let resultArray = [];
 
-    // function sortEntry(){
-    // todos.sort(function(a,b){
-    //     return new Date(b.date) - new Date(a.date);
-    //   });
-    //   DisplayTodos()
-    // }
-      
+        let filteredIncompleteArray = todos.filter(todo => todo.done == false);
+        //filteredIncompleteArray.forEach();
 
-}
+        filteredDoneArray = todos.filter(todo => todo.done == true);
+        //filteredDoneArray.forEach();
+    } else {
+        resultArray = [...filteredIncompleteArray, ...filteredDoneArray];
+        DisplayTodos(resultArray);
+      }
+
+        DisplayTodos(todos);
+    }
+  }  
