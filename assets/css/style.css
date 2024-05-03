@@ -173,15 +173,32 @@ input:checked ~ .bubble::after {
 .create-todo input[type="submit"]:hover {
 	opacity: 0.75;
 }
-.sorting{
+.filters{
 	margin: 1rem;
 	display: flex;
-	justify-content: center;
+	align-items: center;
+    justify-content: space-evenly;
 	gap: 1.5rem;
-
 }
-#sortBtn, #pendingBtn, #revertBtn {
+
+#sortBtn, #pendingBtn, #revertBtn{
 	width: 30%;
+	font-size: 1.125rem;
+	padding: 1rem;;
+	color: #FFF;
+	font-weight: 700;
+	text-transform: uppercase;
+	background-color:rgb(31, 100, 100);
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: 0.2s ease-out; 
+}
+.catergories {
+	display:flex;
+	gap: 10px;
+	}
+#businessBtn, #personalBtn {
+	width: 50%;
 	font-size: 1.125rem;
 	padding: 1rem;;
 	color: #FFF;
@@ -191,6 +208,9 @@ input:checked ~ .bubble::after {
 	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: 0.2s ease-out; 
+}
+#personalBtn{
+	background-color: #EA40A4;
 }
 .todo-list .list {
 	margin: 1rem 0;
