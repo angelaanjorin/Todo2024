@@ -49,7 +49,7 @@ body {
 	width:400px;
 	height: auto;
 	min-height: 400px;
-	padding: 30px;
+	padding: 10px;
 	background: transparent;
 	border: 2px solid #e6b7eca1;
 	border-radius: 10px;
@@ -84,12 +84,18 @@ h5{
 	border: 2px solid #e6b7eca1;
 	margin-bottom: 10px;
 }
-#content,
-#dateInput {
-	background: transparent;
+#content, #dateInput{
+	background: #e6b7eca1;
 	color: #eee;
 	border: none;
-}
+	outline:none;
+	padding: 10px;
+	border-radius: 10px;
+	}
+
+#content {
+		margin-right: 20px;
+	}
 
 input::placeholder{
 	color:#eee
@@ -131,6 +137,10 @@ input[type="checkbox"] {
 	border-color: var(--personal);
 }
 
+.bubble.date, .bubble.pending {
+	border-color: purple;
+}
+
 .bubble::after {
 	content: '';
 	display: block;
@@ -146,13 +156,17 @@ input[type="checkbox"] {
 	background-color: var(--personal);
 }
 
+.bubble.date::after, .bubble.pending::after {
+	background-color: purple;
+}
+
 input:checked ~ .bubble::after {
 	width: 10px;
 	height: 10px;
 	opacity: 1;
 }
 
-input[type="submit"] {
+#new-todo-form input[type="submit"] {
 	width: 100%;
 	font-size: 1.125rem;
 	padding: 10px;
@@ -167,80 +181,75 @@ input[type="submit"] {
 	margin:8px 0 8px 0;
 }
 
-.create-todo input[type="submit"]:hover {
-	opacity: 0.75;
-}
-.filters{
-	margin: 1rem;
-	display: flex;
-	align-items: center;
-    justify-content: space-evenly;
-	gap: 1.5rem;
+#new-todo-form input[type="submit"]:hover {
+	background-color: #313154;
 }
 
-#sortBtn, #pendingBtn, #revertBtn{
-	width: 30%;
-	font-size: 1.125rem;
-	padding: 1rem;;
-	color: #FFF;
-	font-weight: 700;
-	text-transform: uppercase;
-	background-color:rgb(31, 100, 100);
-	border-radius: 0.5rem;
+.filters{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #463c7b;
+	border-radius: 5px;
+	border: 2px solid #e6b7eca1;
+	padding: 10px;
 	cursor: pointer;
-	transition: 0.2s ease-out; 
 }
-.catergories {
-	display:flex;
-	gap: 10px;
-	}
-#businessBtn, #personalBtn {
-	width: 50%;
-	font-size: 1.125rem;
-	padding: 1rem;;
-	color: #FFF;
-	font-weight: 700;
-	text-transform: uppercase;
-	background-color:#3a82ee;
-	border-radius: 0.5rem;
-	cursor: pointer;
-	transition: 0.2s ease-out; 
+.todo-list {
+	height: 300px;
+	overflow-y: overlay;
 }
-#personalBtn{
-	background-color: #EA40A4;
+
+.todo-list::-webkit-scrollbar-track{
+	background: rgb(247,247,247);
+	border-radius: 20px;
 }
+
+.todo-list::-webkit-scrollbar {
+	width: 0;
+}
+
+.todo-list:hover::-webkit-scrollbar {
+	width: 7px;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+	background: #d5d5d5;
+	border-radius:20px;
+}
+
 .todo-list .list {
 	margin: 1rem 0;
 }
 
 .todo-list .todo-item {
-	display: flex;
-	align-items: center;
-	background-color: #FFF;
-	padding: 1rem;
-	border-radius: 0.5rem;
-	box-shadow: var(--shadow);
-	margin-bottom: 1rem;
+	background-color: #463c7b;
+	padding: 10px 12px;
+	border-radius: 5px;
+	border: 2px solid #e6b7eca1;
+	margin: 10px 0;
+	transition: all 0.2s ease;
+}
+.todo-content,
+.todo-date,
+.actions{
+	margin: 5px;
 }
 
 .todo-item label {
-	display: block;
+	display: flex;
+	flex-direction: row-reverse;
 	margin-right: 1rem;
 	cursor: pointer;
 }
 
-.todo-item .todo-content {
-	flex: 1 1 0%;
-}
-
-.todo-item .todo-content input {
-	color: var(--dark);
-	font-size: 1.125rem;
-}
-.todo-date {
-	color: var(--dark);
-	font-size: 1.125rem;
-    cursor: pointer;
+.todo-item .todo-content input,
+.todo-date input {
+	background-color: transparent;
+    border: none;
+    color: #eee;
+    font-size: 1.125rem;
+	outline:none;
 }
 
 .todo-item .actions {
@@ -249,20 +258,18 @@ input[type="submit"] {
 }
 
 .todo-item .actions button {
-	display: block;
-	padding: 0.5rem;
-	border-radius: 0.25rem;
-	color: black;
+	border:none;
+	background-color:transparent;
 	cursor: pointer;
 	transition: 0.2s ease-in-out;
 }
 
-.todo-item .actions button:hover {
-	opacity: 0.75;
+.todo-item .todo-content input:hover {
+	background-color: #e6b7eca1;
 }
 
 
-.todo-item.done .todo-content input {
+.todo-item.done .todo-content input{
 	text-decoration: line-through;
 	color: var(--grey);
 }
@@ -272,7 +279,7 @@ input[type="submit"] {
 	opacity: 0.8;
 }
 
-.actions button.remove-btn{
+.actions button.material-icons.deleteBtn {
 	color: crimson;
 }
 
