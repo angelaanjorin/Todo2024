@@ -5,6 +5,9 @@ window.addEventListener('load', () => {
     const newTodoForm = document.querySelector('#new-todo-form');
 
     newTodoForm.addEventListener('submit', e => {
+		console.log("pending");
+        a
+
         e.preventDefault();
 
         const todo = {
@@ -57,12 +60,12 @@ function DisplayTodos() {
         dateElem.classList.add('todo-date')
         actions.classList.add('actions');
         edit.classList.add("material-icons");
-        deleteButton.classList.add("material-icons", "remove-btn");
+        deleteButton.classList.add("material-icons",  "deleteBtn");
 
         content.innerHTML = `<input type="text" value="${todo.content}" readonly>`;
         dateElem.innerHTML = `<input type="date" value="${todo.date}" readonly>`;
         edit.innerText = 'edit';
-        deleteButton.innerText = 'remove_circle';
+        deleteButton.innerText = 'delete';
 
         label.appendChild(input);
         label.appendChild(span);
@@ -74,22 +77,24 @@ function DisplayTodos() {
         todoItem.appendChild(actions);
 
         todoList.appendChild(todoItem);
-
+        
         if (todo.done) {
             todoItem.classList.add('done');
         }
 
         input.addEventListener('change', (e) => {
+            console.log("trash");
             todo.done = e.target.checked;
+            
             localStorage.setItem('todos', JSON.stringify(todos));
-
             if (todo.done) {
                 todoItem.classList.add('done');
             } else {
                 todoItem.classList.remove('done');
             }
-
+        
             DisplayTodos()
+            
 
         })
 
@@ -174,8 +179,8 @@ function DisplayTodos() {
     });
 
     revertBtn.addEventListener('click', (e) => {
-        todos = JSON.parse(localStorage.getItem('todos')) || [];
-        DisplayTodos();
+       todos = JSON.parse(localStorage.getItem('todos')) || [];
+       DisplayTodos();
     });
 
   }  
