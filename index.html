@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Todo 2024</title>
 </head>
 <body>
@@ -30,7 +31,6 @@
                           id="dateInput"
                           name="dateInput"
                           required/>
-			</form>
 				<h5>Pick a category</h5>
 				<div class="options">
 					<label>
@@ -45,11 +45,37 @@
 					</label>
 				</div>
 				<input type="submit" value="Add todo" />
+			</form>
 		<!-- End of New Todo -->
 
-		<!-- Todo List -->
-		<section class="todo-list">
+		<!-- Sorting Filters of Todos-->
+		<!--<h5>Sort Todos by:</h5>
 			<div class="filters">
+				<label>
+					<input type="radio" id="sortBtn" checked /> 
+					<span class="bubble date"></span>
+					<div>Date</div>
+				</label>
+				<label>
+					<input type="radio" id="pendingBtn" /> 
+					<span class="bubble pending"></span>
+					<div>Pending</div>
+				</label>
+				<label>
+					<input type="radio" id="revertBtn" /> 
+					<span class="bubble revert"></span>
+					<div>Revert</div>
+				</label>-->
+				<!--<label>
+					<input type="radio" id="businessBtn" /> 
+					<span class="bubble business"></span>
+					<div>Business</div>
+				</label>
+				<label>
+					<input type="radio" id="personalBtn" /> 
+					<span class="bubble personal"></span>
+					<div>Personal</div>
+				</label>-->
             <button class="filter" id="sortBtn">Sort by Date</button>
             <button class="filter" data-filter= "done" id="pendingBtn">Pending Todos First</button>
             <button id="revertBtn">Revert</button>
@@ -57,11 +83,10 @@
 				<button id="businessBtn">Business todos first</button>
             <button id="personalBtn">Personal todos first</button>
 			</div>
-			</div>
+		<section class="todo-list">
 			<div class="list" id="todo-list"></div>
 		</section>
 		<!-- End of Todo List -->
-
 	</main>
 	<!-- End of App Wrapper -->
 
