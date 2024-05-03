@@ -122,10 +122,8 @@ function DisplayTodos() {
             let bDate = Date.parse(b.date);
             return aDate - bDate;
         })
-        const todoList = document.querySelector('#todo-list');
     todoList.innerHTML = "";
     DisplayTodos()
-
     })
 
 
@@ -137,14 +135,43 @@ function DisplayTodos() {
         if (b.done){
             return -1;
         }   
-        
-        return a.Date < b.Date;
+        return a.date.category < b.date.category ? -1 :1;
     });
 
     todoList.innerHTML="";
     DisplayTodos ();
     });
 
+    businessBtn.addEventListener('click', (e) => {       
+        todos.sort((a, b)=>{
+            if(a.business) {
+                return 1;
+            }   
+        if (b.business){
+            return -1;
+        }   
+        
+        return a.category < b.category ? -1 :1;
+    });
+
+    todoList.innerHTML="";
+    DisplayTodos ();
+    });
+
+    personalBtn.addEventListener('click', (e) => {
+        todos.sort((a, b)=>{
+            if(a.personal) {
+                return 1;
+            }   
+        if (b.personal){
+            return -1;
+        }   
+        return a.category > b.category ? -1 :1;
+    });
+
+    todoList.innerHTML="";
+    DisplayTodos ();
+    });
 
     revertBtn.addEventListener('click', (e) => {
         todos = JSON.parse(localStorage.getItem('todos')) || [];
