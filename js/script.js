@@ -95,7 +95,6 @@ function DisplayTodos() {
 
         
 
-
         edit.addEventListener('click', (e) => {
             const input = content.querySelector('input');
             input.removeAttribute('readonly');
@@ -131,8 +130,25 @@ function DisplayTodos() {
 
 
     pendingBtn.addEventListener('click', (e) => {
-    let pendingArray = todos.filter(todo => todo.done == false);
-        DisplayTodos(pendingArray);
-   
-    })
+        todos.sort((a, b)=>{
+            if(a.done) {
+                return 1;
+            }   
+        if (b.done){
+            return -1;
+        }   
+        
+        return a.Date < b.Date;
+    });
+
+    todoList.innerHTML="";
+    DisplayTodos ();
+    });
+
+
+    revertBtn.addEventListener('click', (e) => {
+        todos = JSON.parse(localStorage.getItem('todos')) || [];
+        DisplayTodos();
+    });
+
   }  
