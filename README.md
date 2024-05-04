@@ -43,14 +43,14 @@ To create a website that is comprehensive and interactive for a user, as a devel
 
 ## Color Scheme
 
-![Colors](./docs/Extract-palette-from-image-Coolors.png)
+![Colors](https://res.cloudinary.com/dzesjeplp/image/upload/v1714840483/Todo/todo2024/Extract-palette-from-image-Coolors_arqj2n.png)
 * The color scheme of the website was generated using [Coolors](https://coolors.co/) from the background picture. 
 * Different shades of purple were used to match the background. 
 
 ## Typography
 Google Fonts was used to import the chosen fonts for use in the site. 
 We chose to use the font:'montserrat', sans-serif as it is user friendly.
-![Fonts](./docs/Montserrat-Google-Fonts.png)
+![Fonts](https://res.cloudinary.com/dzesjeplp/image/upload/v1714840483/Todo/todo2024/Montserrat-Google-Fonts_lkgc6u.png)
 
 ## Imagery
 The background image used within the site has been chosen for a calming landscape backdrop for the site.
@@ -61,57 +61,58 @@ The website is comprised of the Home page with a Heading and then 3 main section
 
 ## The Input Section 
 
-![The Input Section]( Image goes here)
+![The Input Section](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841447/Todo-2024_dunz2x.png)
 The input section has four sections. There are two input fields, one for text with a placeholder saying "Add your Todo" so that the user is clearly notified to add thier todo in that field. The second input area indicates to the user to add a date. They can type the date using the given format as a placeholder. Alternatively there is an icon to the right of this input area indicating a calender. When the user clicks on the icon a drop down calender is shown, which they can use to choose thier date. 
 Then there are two bottons to choose from to indicate if the todo is personal or for business. The business botton is per default already chosen. The user has to toggle between the two buttons to make thier choice.
 At the bottom there is a big Add button to indicate the submit button. If it is clicked and there are no inputs in the sections above it, then error messages appear for both the date and todo input fields.
-![Live Homepage Here](https://angelaanjorin.github.io/Todo2024/)
+![Date Input Section](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841806/dateinpute_xuurn9.png)
+[Live Homepage Here](https://angelaanjorin.github.io/Todo2024/)
 
 ## The Filter Section
 
 This section has 5 buttons to sort the todo list according to:
 ### Date: 
 After the user clicks this button, the todo list will be sorted according to the date.
-[Date](image)
+[Date](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841445/date_wzyfxg.png)
 
 ### Pending:
 After the user clicks this butoon, the todo list will be sorted with pending todos first.
-[Pending](image)
+[Pending](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841445/pending_l4irty.png)
 
 ### Revert:
 After the user clicks this button, the todo list is reverted to how it originally was before any changes like edits, deleted todos or newly added todos. 
-[Revert](image)
 
 ### Business:
 After the user clicks this button, the todo list is sorted with the business todos first.
-[Business](image)
+[Business](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841442/businessfirst_zzmdwd.png)
 
 ### Personal:
 After the user clicks this button, the todo list is sorted with the personal todos first.
-[Personal](image)
+[Personal](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841441/personalfirst_pdzf2h.png)
 
 ## The Todo List Section
 This section shows the created todos. If the user adds a new todo, it appears at the end of the list. 
 There are 5 display sections of each todo:
 ### Top right:
 In the individual displayed todos, there is a checkcircle at the top right. The circle has a border and a center. When the circle is unchecked this is shown as either a pink border for personal or blue border for business todos.  If the circle is checked to indicate that the todo is complete, the center gets the same color as the border. At the same instance the text of the todo gets a line-through and the text font color changes to grey. 
-[Personal](image)
+[Checked](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841440/checkmark_aqx2oi.png)
+
 ### Content left section:
 Here is where the title, content or description of the todo is displayed. On larger devices where the hover feature is active, the background color changes to a lighter purple to highlight the section for the user. 
 As mentioned above, when the todo is checked complete, there is a line through the text and a font color change to grey to indicate the complete status of the todo.
 When the edit icon is clicked, the focus of the curser pointer moves to the text to indicate that the user can edit the text in that field. When the user clicks again in the text field it changes to a lighter purple color. By moving out of the text field the edited text is then saved.
 It is possible to edit even checked text. The line through and font color of grey remain as features even during the editing process.  
-[Personal](image)
+
 ### Date section:
 Here the chosen date is displayed of the todo.
-[Personal](image)
+
 ### Actions buttons at the left buttom section:
 On the left is the edit button with a hover feature that changes the background to a dark grey when hovered over (on larger devices). When the edit icon is clicked, the focus of the curser goes directly to the title or description area of the todo to notify the user that they can edit the text in that area. 
 On the right of the edit icon is a delete icon depicted by a trash can and having a bright crimson color to alert the user that if this button is clicked the todo gets deleted and can´t be retrieved again.
-[Personal](image)
+
 ### Scrollbar:
 The scrollbar appears on the far righthand side of the whole todo list after a maximal height of 300px is reached. The color changes from an off white to a light grey when the curser drags the scrollbar. On larger devices the thickness of the scrollbar increases when hovered over.
-[Personal](image)
+
 
 ## Future Features
 
@@ -129,7 +130,6 @@ The scrollbar appears on the far righthand side of the whole todo list after a m
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript).
 
 ## Frameworks - Libraries - Programs Used
-
 * [Google Fonts:](https://fonts.google.com/)
    * Google fonts were used to import the 'Montserrat' fonts throughout the style.css.
 * [Google icons:](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:delete:FILL@0;wght@400;GRAD@0;opsz@24)
@@ -210,9 +210,8 @@ The testing was done using the Google Chrome Browser. Testing was also done usin
 
 ## Images
 
-* [Pexels:](https://www.pexels.com/search/baking%20children/)
-    *All the free images used on the site were gotten from Pexels.
-## Media
+* [Hotpot:](https://hotpot.ai/art-generator)
+    *The background image used on the site was AI-generated from hotpot.
   
 ## Special Thanks
  * Special thanks to my partner and alumni of Code Institute Eric Jones for his assistance throughout this project.
