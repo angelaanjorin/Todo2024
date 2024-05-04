@@ -167,51 +167,57 @@ The website development was created in the "main" branch. This branch was deploy
 5. Click on "Check it out here!".
 6. Select the "main" branch and select "Save".
 7. The link to the live website was ready on the top.
-## Local Development
-### How to Fork
-### How to Clone
+
 # Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 * [W3C Markup Validator](https://validator.w3.org/#validate_by_input) 
 
-[Result HTML](https://res.cloudinary.com/dzesjeplp/image/upload/v1714843946/html_validator_hdbryr.png)
+![Result HTML](https://res.cloudinary.com/dzesjeplp/image/upload/v1714843946/html_validator_hdbryr.png)
 
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
-[Result CSS](https://res.cloudinary.com/dzesjeplp/image/upload/v1714845095/CSS_Validator_ey9k1a.png)
+![Result CSS](https://res.cloudinary.com/dzesjeplp/image/upload/v1714845095/CSS_Validator_ey9k1a.png)
 
 * [JS Validator](https://jshint.com/)
 
-[Result JS](https://res.cloudinary.com/dzesjeplp/image/upload/v1714846234/JSvalidator_q4opue.png)
+![Result JS](https://res.cloudinary.com/dzesjeplp/image/upload/v1714846234/JSvalidator_q4opue.png)
 
 Google Lighthouse was used to test Performance, Best Practices, Accessibility and SEO on both Desktop and Mobile devices.
 The testing was done using the Google Chrome Browser. Testing was also done using Firefox on desktop.
 
-![Lighthouse Results:](./assets/images/READMEimages/Lighthouse-Report-Viewer5.png)
+![Lighthouse Results:](https://res.cloudinary.com/dzesjeplp/image/upload/v1714848457/PageSpeed-Insights_hdc1q0.png)
 
   ## Functionality
 * All links have been hovered and clicked to ensure accessibility.
-* Pages all load correctly on all device screen sizes.
-* All social media links work correctly and open on a new tab.
-* All images load on each page as intended.
-* All the buttons and links on the different pages are working correctly and bring the users to the function that they were built for.
-* The button on the Signup Page and the sections to be filled out with the requested information change the border color when hovered by the user. They are working without issues.
-* The filled out sections of the form change color when completed by the user correctly.
-
+* Webpage loads correctly on all device screen sizes.
+* The background image loads as intended.
+* All the buttons are working correctly and provide the function results that they were built for.
+* The todos are saved on the local storage of the computers and can be re-assessed when the user returns to the site after exiting it.
 
    ## Bugs
+* My program had a bug in the javascript and wouldn´t run because in the DisplayTodos function i was not passing the todos into the function. I had to work with the tutor support to debug this problem.
 
-* I was unable to reduce the largest contenful paint element in <section id=xmas> and eliminate the render-blocking resources from Font Awesome as suggested by Google Lighthouse [Lighthouse Results here:](https://angelaanjorin.github.io/Roxheim-Baking-School/index.html)
+![Before the correction](https://res.cloudinary.com/dzesjeplp/image/upload/v1714848902/Screenshot_2024-05-03_223459_j8ljc4.png)
 
-   ## Website Development Issues
+![Before the correction](https://res.cloudinary.com/dzesjeplp/image/upload/v1714848889/Screenshot_2024-05-04_130450_bjhwop.png)
 
-* At the initial stages of my project, I was using [codeanywhere ](https://codeanywhere.com/) with some difficulties until i was advised to use Visual Studio Code. 
-* I changed some of the fonts and colors towards the end of the project to improve the user experience.
+![After the correction](https://res.cloudinary.com/dzesjeplp/image/upload/v1714848887/Screenshot_2024-05-04_124652_lkfh4d.png)
 
-# Credits
-## Code Used
+* I had an overlay in the vertical access of my todo list and i had to fix the issue by adding some code in the css file line 185 and set the overflow-y to scroll.
+
+![Before](https://res.cloudinary.com/dzesjeplp/image/upload/v1714848959/overflow_rwpy3i.png)
+
+* I needed tutor support to help me with the filter functions because after the arrow function i was using todolist.sort((a, b) =>.... instead of todos.sort((a,b) =>....
+
+* I needed to tweek the filter functions many times until they worked the way i wanted them to work. There are still bugs. Like if you sort the list first by date and then by pending , it keeps the original sort by date and then with the new function of pending todos first, which means the pending todos will appear on the top of the list sorted by dte and the completed will appear below sorted by date. If you click the pending button before any other sort button, it will only sort per pending and not any other criteria. The same goes for the other buttons as well. 
+* Below are screenshots i made while i was coding for the personal todos firt function. I figured out in the end that the last return function (return a.category > b.category ? -1 : 1;) was sorting alphabetically and since "b" for businees comes before "p", it would always return the business todos first until i changed comparison sign from < to >. Well at least that is how i explained it to myself. 
+
+![Before] (https://res.cloudinary.com/dzesjeplp/image/upload/v1714851722/personalbeforechange_idw0cx.jpg)
+
+![After](https://res.cloudinary.com/dzesjeplp/image/upload/v1714851719/personalafterchange_erftbq.jpg)
+
 
 ## Information Sources/Resources
 
@@ -222,15 +228,16 @@ The testing was done using the Google Chrome Browser. Testing was also done usin
 
 ## Content
 
-* All the text content is original. I got inspiration from the following the Love run Project and following Projects 1 from Code Institute
-    1. [Love Running](https://code-institute-org.github.io/love-running-2.0/index.html)
-    2. [Flawlesscooking by Martina Martin](https://martiless.github.io/flawlesscooking/)
-    3. [Travel World by Pedro Cristo](https://pedrocristo.github.io/portfolio_project_1/index.html)
+* All the text content is original. I got inspiration from the following projects:
+    1. [yt-js-todo-2022 by TylerPottsDev](https://github.com/TylerPottsDev/yt-js-todo-2022)
+    2. [Todo list tutorial by Gordon Chan](https://github.com/gorgorgordon/JS-To-do-List-App)
+    3. [Tutorial from Dom from dcode](https://dev.to/dcodeyt)
+    4. [Learntime](https://learntime.net/)
 
 ## Images
 
 * [Hotpot:](https://hotpot.ai/art-generator)
-    *The background image used on the site was AI-generated from hotpot.
+    *The background image used on the site was AI-generated from hotpot from a similar image used by the todo list from learntime (link above).
   
 ## Special Thanks
  * Special thanks to my partner and alumni of Code Institute Eric Jones for his assistance throughout this project.
