@@ -1,31 +1,36 @@
 
 
 window.addEventListener('load', () => {
-    todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+    const todos = JSON.parse(localStorage.getItem('todos')) || [];
     const newTodoForm = document.querySelector('#new-todo-form');
 
     newTodoForm.addEventListener('submit', e => {
-		console.log("pending");
-        a
+        try {
+            console.log("pending");
+            a
 
-        e.preventDefault();
+            e.preventDefault();
 
-        const todo = {
-            content: e.target.elements.content.value,
-            date: e.target.elements.dateInput.value,
-            category: e.target.elements.category.value,
-            done: false,
-            createdAt: new Date().getTime()
+            const todo = {
+                content: e.target.elements.content.value,
+                date: e.target.elements.dateInput.value,
+                category: e.target.elements.category.value,
+                done: false,
+                createdAt: new Date().getTime()
+            }
+
+            todos.push(todo);
+
+            localStorage.setItem('todos', JSON.stringify(todos));
+
+            // Reset the form
+            e.target.reset();
+
+            DisplayTodos(todos)
+        } catch (e) {
+            console.log(e);
         }
-
-        todos.push(todo);
-
-        localStorage.setItem('todos', JSON.stringify(todos));
-
-        // Reset the form
-        e.target.reset();
-
-        DisplayTodos(todos)
     })
 
     DisplayTodos(todos)
@@ -60,7 +65,7 @@ function DisplayTodos() {
         dateElem.classList.add('todo-date')
         actions.classList.add('actions');
         edit.classList.add("material-icons");
-        deleteButton.classList.add("material-icons",  "deleteBtn");
+        deleteButton.classList.add("material-icons", "deleteBtn");
 
         content.innerHTML = `<input type="text" value="${todo.content}" readonly>`;
         dateElem.innerHTML = `<input type="date" value="${todo.date}" readonly>`;
@@ -77,7 +82,7 @@ function DisplayTodos() {
         todoItem.appendChild(actions);
 
         todoList.appendChild(todoItem);
-        
+
         if (todo.done) {
             todoItem.classList.add('done');
         }
@@ -85,20 +90,20 @@ function DisplayTodos() {
         input.addEventListener('change', (e) => {
             console.log("trash");
             todo.done = e.target.checked;
-            
+
             localStorage.setItem('todos', JSON.stringify(todos));
             if (todo.done) {
                 todoItem.classList.add('done');
             } else {
                 todoItem.classList.remove('done');
             }
-        
+
             DisplayTodos()
-            
+
 
         })
 
-        
+
 
         edit.addEventListener('click', (e) => {
             const input = content.querySelector('input');
@@ -127,60 +132,60 @@ function DisplayTodos() {
             let bDate = Date.parse(b.date);
             return aDate - bDate;
         })
-    todoList.innerHTML = "";
-    DisplayTodos()
+        todoList.innerHTML = "";
+        DisplayTodos()
     })
 
 
     pendingBtn.addEventListener('click', (e) => {
-        todos.sort((a, b)=>{
-            if(a.done) {
+        todos.sort((a, b) => {
+            if (a.done) {
                 return 1;
-            }   
-        if (b.done){
-            return -1;
-        }   
-        return a.date.category < b.date.category ? -1 :1;
+            }
+            if (b.done) {
+                return -1;
+            }
+            return a.date.category < b.date.category ? -1 : 1;
+        });
+
+        todoList.innerHTML = "";
+        DisplayTodos();
     });
 
-    todoList.innerHTML="";
-    DisplayTodos ();
-    });
-
-    businessBtn.addEventListener('click', (e) => {       
-        todos.sort((a, b)=>{
-            if(a.business) {
+    businessBtn.addEventListener('click', (e) => {
+        todos.sort((a, b) => {
+            if (a.business) {
                 return 1;
-            }   
-        if (b.business){
-            return -1;
-        }   
-        
-        return a.category < b.category ? -1 :1;
-    });
+            }
+            if (b.business) {
+                return -1;
+            }
 
-    todoList.innerHTML="";
-    DisplayTodos ();
+            return a.category < b.category ? -1 : 1;
+        });
+
+        todoList.innerHTML = "";
+        DisplayTodos();
     });
 
     personalBtn.addEventListener('click', (e) => {
-        todos.sort((a, b)=>{
-            if(a.personal) {
+        todos.sort((a, b) => {
+            if (a.personal) {
                 return 1;
-            }   
-        if (b.personal){
-            return -1;
-        }   
-        return a.category > b.category ? -1 :1;
-    });
+            }
+            if (b.personal) {
+                return -1;
+            }
+            return a.category > b.category ? -1 : 1;
+        });
 
-    todoList.innerHTML="";
-    DisplayTodos ();
+        todoList.innerHTML = "";
+        DisplayTodos();
     });
 
     revertBtn.addEventListener('click', (e) => {
-       todos = JSON.parse(localStorage.getItem('todos')) || [];
-       DisplayTodos();
+        todos = JSON.parse(localStorage.getItem('todos')) || [];
+        DisplayTodos();
     });
 
-  }  
+}  
