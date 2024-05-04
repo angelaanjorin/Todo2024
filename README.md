@@ -76,29 +76,36 @@ At the bottom there is a big Add button to indicate the submit button. If it is 
 This section has 5 buttons to sort the todo list according to:
 ### Date: 
 After the user clicks this button, the todo list will be sorted according to the date.
-[Date](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841445/date_wzyfxg.png)
+
+![Date](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841445/date_wzyfxg.png)
 
 ### Pending:
 After the user clicks this butoon, the todo list will be sorted with pending todos first.
-[Pending](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841445/pending_l4irty.png)
+
+![Pending](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841445/pending_l4irty.png)
 
 ### Revert:
 After the user clicks this button, the todo list is reverted to how it originally was before any changes like edits, deleted todos or newly added todos. 
 
 ### Business:
 After the user clicks this button, the todo list is sorted with the business todos first.
-[Business](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841442/businessfirst_zzmdwd.png)
+
+![Business](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841442/businessfirst_zzmdwd.png)
 
 ### Personal:
 After the user clicks this button, the todo list is sorted with the personal todos first.
-[Personal](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841441/personalfirst_pdzf2h.png)
+
+![Personal](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841441/personalfirst_pdzf2h.png)
 
 ## The Todo List Section
+
 This section shows the created todos. If the user adds a new todo, it appears at the end of the list. 
 There are 5 display sections of each todo:
+
 ### Top right:
 In the individual displayed todos, there is a checkcircle at the top right. The circle has a border and a center. When the circle is unchecked this is shown as either a pink border for personal or blue border for business todos.  If the circle is checked to indicate that the todo is complete, the center gets the same color as the border. At the same instance the text of the todo gets a line-through and the text font color changes to grey. 
-[Checked](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841440/checkmark_aqx2oi.png)
+
+![Checked](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841440/checkmark_aqx2oi.png)
 
 ### Content left section:
 Here is where the title, content or description of the todo is displayed. On larger devices where the hover feature is active, the background color changes to a lighter purple to highlight the section for the user. 
