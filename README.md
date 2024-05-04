@@ -277,7 +277,7 @@ The testing was done using the Google Chrome Browser. Testing was also done usin
 * I needed to tweak the filter functions many times until they worked the way I wanted them to work. There are still bugs. Like if you sort the list first by date and then by pending , it keeps the original sort by date status and then with the new sort status of pending todos first, which means the pending todos will appear on the top of the list sorted by date and the completed will appear below sorted by date. If you click the pending button before any other sort button, it will only sort per pending and not any other criteria. The same goes for the other buttons as well. 
 * Below are screenshots I made while I was coding for the "personal todos firt" function. I figured out in the end that the last return function (return a.category > b.category ? -1 : 1;) was sorting alphabetically and since "b" for business comes before "p", it would always return the business todos first until I changed the comparison sign from < to >. 
 
-![Prior to correction] (https://res.cloudinary.com/dzesjeplp/image/upload/v1714851722/personalbeforechange_idw0cx.jpg)
+![Prior to correction](https://res.cloudinary.com/dzesjeplp/image/upload/v1714851722/personalbeforechange_idw0cx.jpg)
 
 ![After the correction](https://res.cloudinary.com/dzesjeplp/image/upload/v1714851719/personalafterchange_erftbq.jpg)
 
