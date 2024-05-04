@@ -9,7 +9,7 @@ This Todo App website was built using HTML, CSS and JavaScript. The website is i
 
 [Live Website Here](https://angelaanjorin.github.io/Todo2024/)
 
-![Website Homepage](https://res.cloudinary.com/dzesjeplp/image/upload/v1714839135/Todo/Am-I-Responsive-_bs8bfx.png)
+![Website Homepage](https://res.cloudinary.com/dzesjeplp/image/upload/v1714865802/Am-I-Responsive-_vdivqv.png)
 
 # README Table Content
 
