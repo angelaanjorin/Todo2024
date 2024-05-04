@@ -4,7 +4,7 @@
 
 Project 2 for Code Institute Full-stack development program: JavaScript Essentials
 
-This Todo App website was built using HTML, CSS and JavaScript. The website is interactive and user-friendly allowing the user to add todos to a list. They can later on sort the todo list according to thier preference and edit or delete todo items.
+This Todo App website was built using HTML, CSS and JavaScript. The website is interactive and user-friendly, allowing the user to add todos to a list. They can later on sort the todo list according to thier preferences and edit or delete todo items.
 
 
 [Live Website Here](https://angelaanjorin.github.io/Todo2024/)
@@ -19,8 +19,9 @@ The goals for this site are as follows:
 * To be able to view the site on a range of device sizes.
 * To provide a Todo APP that users can use to write up things they have to do.
 * To provide the function of adding a date to state the due dates for when the todos should be completed.
-* To make it possible to save the information on the local storage of the users device.
 * To edit, delete and sort the todos.
+* To make it possible to save the information on the local storage of the users device.
+
 
 # User Experience - UX
 
@@ -53,7 +54,7 @@ We chose to use the font:'montserrat', sans-serif as it is user friendly.
 ![Fonts](https://res.cloudinary.com/dzesjeplp/image/upload/v1714840483/Todo/todo2024/Montserrat-Google-Fonts_lkgc6u.png)
 
 ## Imagery
-The background image used within the site has been chosen for a calming landscape backdrop for the site.
+The background image used within the site has been chosen because it is a calming landscape, which does not interfer with the todo app located ontop of it.
 
 # Features
 
@@ -63,8 +64,9 @@ The website is comprised of the Home page with a Heading and then 3 main section
 
 ![The Input Section](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841447/Todo-2024_dunz2x.png)
 
-The input section has four sections. There are two input fields, one for text with a placeholder saying "Add your Todo" so that the user is clearly notified to add thier todo in that field. The second input area indicates to the user to add a date. They can type the date using the given format as a placeholder. Alternatively there is an icon to the right of this input area indicating a calender. When the user clicks on the icon a drop down calender is shown, which they can use to choose thier date. 
-Then there are two bottons to choose from to indicate if the todo is personal or for business. The business botton is per default already chosen. The user has to toggle between the two buttons to make thier choice.
+The input section has four sections. There are two input fields, one for text with a placeholder saying "Add your Todo" so that the user is clearly notified to add thier todo in that field. 
+The second input area indicates to the user to add a date. They can type the date using the given format as a placeholder. Alternatively there is an icon to the right of this input area indicating a calender. When the user clicks on the icon a drop down calender is shown, which they can use to choose thier date. 
+Then there are two buttons to choose from to indicate if the todo is personal or for business. The business botton is per default already chosen. The user has to toggle between the two buttons to make thier choice.
 At the bottom there is a big Add button to indicate the submit button. If it is clicked and there are no inputs in the sections above it, then error messages appear for both the date and todo input fields.
 
 ![Date Input Section](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841806/dateinpute_xuurn9.png)
@@ -80,12 +82,12 @@ After the user clicks this button, the todo list will be sorted according to the
 ![Date](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841445/date_wzyfxg.png)
 
 ### Pending:
-After the user clicks this butoon, the todo list will be sorted with pending todos first.
+After the user clicks this button, the todo list will be sorted with the pending todos shown first.
 
 ![Pending](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841445/pending_l4irty.png)
 
 ### Revert:
-After the user clicks this button, the todo list is reverted to how it originally was before any changes like edits, deleted todos or newly added todos. 
+After the user clicks this button, the todo list is reverted to how it originally was before clicking any of the sort buttons. Any changes like edits, deleted todos, newly added todos or checked or unchecked todos that are made and saved on the local storage will be shown. In short the revert button shows the current status of the todos in the local storage. 
 
 ### Business:
 After the user clicks this button, the todo list is sorted with the business todos first.
