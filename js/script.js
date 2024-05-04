@@ -20,6 +20,7 @@ window.addEventListener('load', () => {
                 done: false,
                 createdAt: new Date().getTime()
             }
+            
 
             todos.push(todo);
 
@@ -116,7 +117,7 @@ function DisplayTodos(todos) {
                 input.setAttribute('readonly', true);
                 todo.content = e.target.value;
                 localStorage.setItem('todos', JSON.stringify(todos));
-                DisplayTodos()
+                DisplayTodos(todos)
 
             })
         })
