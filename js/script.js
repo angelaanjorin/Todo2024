@@ -6,11 +6,6 @@ window.addEventListener('load', () => {
     const newTodoForm = document.querySelector('#new-todo-form');
 
     newTodoForm.addEventListener('submit', e => {
-        console.log('submitting')
-        try {
-            console.log("pending");
-            
-
             e.preventDefault();
 
             const todo = {
@@ -19,26 +14,24 @@ window.addEventListener('load', () => {
                 category: e.target.elements.category.value,
                 done: false,
                 createdAt: new Date().getTime()
-            }
+            };
             
 
             todos.push(todo);
-
-            console.log('todos in event listener', todos);
 
             localStorage.setItem('todos', JSON.stringify(todos));
 
             // Reset the form
             e.target.reset();
 
-            DisplayTodos(todos)
-        } catch (e) {
-            console.log(e);
-        }
-    })
+            DisplayTodos(todos);
+       
+            
+    
+    });
 
-    DisplayTodos(todos)
-})
+    DisplayTodos(todos);
+});
 
 function DisplayTodos(todos) {
     const todoList = document.querySelector('#todo-list');
@@ -52,7 +45,7 @@ function DisplayTodos(todos) {
         const input = document.createElement('input');
         const span = document.createElement('span');
         const content = document.createElement('div');
-        const dateElem = document.createElement('div')
+        const dateElem = document.createElement('div');
         const actions = document.createElement('div');
         const edit = document.createElement('button');
         const deleteButton = document.createElement('button');
@@ -66,7 +59,7 @@ function DisplayTodos(todos) {
             span.classList.add('business');
         }
         content.classList.add('todo-content');
-        dateElem.classList.add('todo-date')
+        dateElem.classList.add('todo-date');
         actions.classList.add('actions');
         edit.classList.add("material-icons");
         deleteButton.classList.add("material-icons", "deleteBtn");
@@ -102,10 +95,10 @@ function DisplayTodos(todos) {
                 todoItem.classList.remove('done');
             }
 
-            DisplayTodos(todos)
+            DisplayTodos(todos);
 
 
-        })
+        });
 
 
 
@@ -117,30 +110,30 @@ function DisplayTodos(todos) {
                 input.setAttribute('readonly', true);
                 todo.content = e.target.value;
                 localStorage.setItem('todos', JSON.stringify(todos));
-                DisplayTodos(todos)
+                DisplayTodos(todos);
 
-            })
-        })
+            });
+        });
 
         deleteButton.addEventListener('click', (e) => {
             console.log('todos in delete button event listener', todos);
             todos = todos.filter(t => t != todo);
             console.log(todos);
             localStorage.setItem('todos', JSON.stringify(todos));
-            DisplayTodos(todos)
-        })
+            DisplayTodos(todos);
+        });
 
-    })
+    });
 
     sortBtn.addEventListener('click', (e) => {
         todos.sort((a, b) => {
             let aDate = Date.parse(a.date);
             let bDate = Date.parse(b.date);
             return aDate - bDate;
-        })
+        });
         todoList.innerHTML = "";
-        DisplayTodos(todos)
-    })
+        DisplayTodos(todos);
+    });
 
 
     pendingBtn.addEventListener('click', (e) => {

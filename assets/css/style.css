@@ -9,8 +9,6 @@
 	--dark: #313154;
 	--danger: #ff5b57;
 
-	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
-	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
 }
 /* End of Variables */
 
@@ -21,20 +19,7 @@
 	box-sizing: border-box;
 	font-family: 'montserrat', sans-serif;
 }
-/*button {
-	appearance: none;
-	background: none;
-	outline: none;
-	border: none;
-	cursor: pointer;}
 
-input:not([type="radio"]):not([type="checkbox"]) {
-	appearance: none;
-	border: none;
-	outline: none;
-	background: none;
-	cursor: initial;
-}
 /* End of Resets */
 
 body {
@@ -197,7 +182,7 @@ input:checked ~ .bubble::after {
 }
 .todo-list {
 	height: 300px;
-	overflow-y: visible;
+	overflow-y: scroll;
 }
 
 /* Track */

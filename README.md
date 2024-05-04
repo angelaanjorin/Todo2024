@@ -175,7 +175,16 @@ The website development was created in the "main" branch. This branch was deploy
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 * [W3C Markup Validator](https://validator.w3.org/#validate_by_input) 
+
+[Result HTML](https://res.cloudinary.com/dzesjeplp/image/upload/v1714843946/html_validator_hdbryr.png)
+
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+[Result CSS](https://res.cloudinary.com/dzesjeplp/image/upload/v1714845095/CSS_Validator_ey9k1a.png)
+
+* [JS Validator](https://jshint.com/)
+
+[Result JS](https://res.cloudinary.com/dzesjeplp/image/upload/v1714846234/JSvalidator_q4opue.png)
 
 Google Lighthouse was used to test Performance, Best Practices, Accessibility and SEO on both Desktop and Mobile devices.
 The testing was done using the Google Chrome Browser. Testing was also done using Firefox on desktop.
