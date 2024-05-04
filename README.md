@@ -132,8 +132,8 @@ The scrollbar appears on the far righthand side of the whole todo list after a m
 
 * [Google Fonts:](https://fonts.google.com/)
    * Google fonts were used to import the 'Montserrat' fonts throughout the style.css.
-* [Font Awesome:]()
-    * Icons for the burger Navigation Menu, the cake with candles, happy child and for the social networks were acquired from Font Awesome.
+* [Google icons:](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:delete:FILL@0;wght@400;GRAD@0;opsz@24)
+    * Icons for the edit and delete functions were acquired from Google fonts(material.io).
 * [Git](https://git-scm.com/)
     * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 * [GitHub:](https://github.com/)
@@ -142,13 +142,8 @@ The scrollbar appears on the far righthand side of the whole todo list after a m
     * This link was used to create the table of content for the README file.
 * [Visual Studio Code](https://code.visualstudio.com/)
     *Visual studio code was used to write my code.
-* [Freeconvert:](https://www.freeconvert.com/de/webp-converter)
-* [Convertio:](https://convertio.co/)
-    * These sites were used to modify and resize all images on this website.
-* [Canva](https://www.canva.com/design/DAGA0N2eK2Y/s47LWlWuWGWSnfLPZoMWpQ/edit)
-    * Canva was used to create the Thankyou image.
 * [Coolors:](https://coolors.co/image-picker)
-    * Coolors was used to generate a color pallete for the site based on the welcoming first image on the Home Page.
+    * Coolors was used to generate a color pallete for the site based on the background image of the website.
 # Deployment & Local Development
 ## Deployment
 The website development was created in the "main" branch. This branch was deployed using GitHub Pages.
@@ -220,5 +215,6 @@ The testing was done using the Google Chrome Browser. Testing was also done usin
 ## Media
   
 ## Special Thanks
-
  * Special thanks to my partner and alumni of Code Institute Eric Jones for his assistance throughout this project.
+ * Special thanks to my mentor Gareth McGirr for helping me to fix some bugs and guiding me throughout the project.
+ * Thanks to the support team, especially John from the tutoring service.
