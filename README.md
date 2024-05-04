@@ -9,7 +9,7 @@ This Todo App website was built using HTML, CSS and JavaScript. The website is i
 
 [Live Website Here](https://angelaanjorin.github.io/Todo2024/)
 
-![Website Homepage](./docs/Am-I-Responsive-.png)
+![Website Homepage](docs/Am-I-Responsive-.png)
 
 
 
@@ -65,7 +65,7 @@ The website is comprised of the Home page with a Heading and then 3 main section
 The input section has four sections. There are two input fields, one for text with a placeholder saying "Add your Todo" so that the user is clearly notified to add thier todo in that field. The second input area indicates to the user to add a date. They can type the date using the given format as a placeholder. Alternatively there is an icon to the right of this input area indicating a calender. When the user clicks on the icon a drop down calender is shown, which they can use to choose thier date. 
 Then there are two bottons to choose from to indicate if the todo is personal or for business. The business botton is per default already chosen. The user has to toggle between the two buttons to make thier choice.
 At the bottom there is a big Add button to indicate the submit button. If it is clicked and there are no inputs in the sections above it, then error messages appear for both the date and todo input fields.
-[Live Homepage Here](https://angelaanjorin.github.io/Todo2024/)
+![Live Homepage Here](https://angelaanjorin.github.io/Todo2024/)
 
 ## The Filter Section
 
@@ -132,7 +132,7 @@ The scrollbar appears on the far righthand side of the whole todo list after a m
 
 * [Google Fonts:](https://fonts.google.com/)
    * Google fonts were used to import the 'Montserrat' fonts throughout the style.css.
-* [Font Awesome:](https://fontawesome.com/)
+* [Font Awesome:]()
     * Icons for the burger Navigation Menu, the cake with candles, happy child and for the social networks were acquired from Font Awesome.
 * [Git](https://git-scm.com/)
     * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
