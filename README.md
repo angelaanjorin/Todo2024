@@ -101,19 +101,18 @@ After the user clicks this button, the todo list is sorted with the personal tod
 
 ## The Todo List Section
 
-This section shows the created todos. If the user adds a new todo, it appears at the end of the list. 
-There are 5 display sections of each todo:
+This section shows the created todos. If the user adds a new todo, it appears at the end of the list. There is a scrollbar on the right hand side of the todolist, which enables the user to scroll through all the todos.
+There are 5 display sections for each todo:
 
 ### Top right:
-In the individual displayed todos, there is a checkcircle at the top right. The circle has a border and a center. When the circle is unchecked this is shown as either a pink border for personal or blue border for business todos.  If the circle is checked to indicate that the todo is complete, the center gets the same color as the border. At the same instance the text of the todo gets a line-through and the text font color changes to grey. 
+In the top right corner of each todo, there is a checkcircle. The circle has a border and a center. When the circle is unchecked, this is demontrated as either a pink border for personal or blue border for business todos.  If the circle is checked to indicate that the todo is complete, the center gets the same color as the border. At the same instance the text of the todo gets a line-through and the text font color changes to grey. 
 
 ![Checked](https://res.cloudinary.com/dzesjeplp/image/upload/v1714841440/checkmark_aqx2oi.png)
 
 ### Content left section:
 Here is where the title, content or description of the todo is displayed. On larger devices where the hover feature is active, the background color changes to a lighter purple to highlight the section for the user. 
 As mentioned above, when the todo is checked complete, there is a line through the text and a font color change to grey to indicate the complete status of the todo.
-When the edit icon is clicked, the focus of the curser pointer moves to the text to indicate that the user can edit the text in that field. When the user clicks again in the text field it changes to a lighter purple color. By moving out of the text field the edited text is then saved.
-It is possible to edit even checked text. The line through and font color of grey remain as features even during the editing process.  
+When the edit icon is clicked, the focus of the curser pointer moves to the text to indicate that the user can edit the text in that field. When the user clicks again in the text field it changes to a lighter purple color. 
 
 ### Date section:
 Here the chosen date is displayed of the todo.
@@ -123,15 +122,15 @@ On the left is the edit button with a hover feature that changes the background 
 On the right of the edit icon is a delete icon depicted by a trash can and having a bright crimson color to alert the user that if this button is clicked the todo gets deleted and can´t be retrieved again.
 
 ### Scrollbar:
-The scrollbar appears on the far righthand side of the whole todo list after a maximal height of 300px is reached. The color changes from an off white to a light grey when the curser drags the scrollbar. On larger devices the thickness of the scrollbar increases when hovered over.
+The scrollbar appears on the far righthand side of the whole todo list after a maximal height of 300px is reached. 
 
 
 ## Future Features
 
 ### More Edit Functions
 
-* It would be very beneficial to be able to edit and change not only the description of the todo, but also the date and change the checkcircle incase the wrong category was initally choses as the business icon is per default choses.
-* When the edit icon is clicked on a checked todo, a popup message should appear to ask the user if they want to make changes or not. Then if the user chooses to make changes, they should be prompted to uncheck the todo so that the text is no longer grey or have a line-through. Afterwards they can choose to check the todo or leave it as unchecked.
+* It would be very beneficial to be able to edit and change not only the description of the todo, but also the date and change the status of the checkcircle, incase the wrong category was initially chosen as the business icon is per default chosen.
+* When the edit icon is clicked on a checked todo, a popup message should appear to ask the user if they want to make changes or not. Then if the user chooses to make changes, they should be prompted to uncheck the todo so that the text is no longer grey or have a line-through. Afterwards they can choose to check the todo again or leave it as unchecked.
 
 # Technolgies Used
 
@@ -169,6 +168,24 @@ The website development was created in the "main" branch. This branch was deploy
 5. Click on "Check it out here!".
 6. Select the "main" branch and select "Save".
 7. The link to the live website was ready on the top.
+
+## Local Development
+
+### How to Fork
+To fork the Todo2024 repository:
+
+Log in (or sign up) to Github.
+Go to the repository for this project [Todo2024 repository](https://github.com/angelaanjorin/Todo2024).
+Click the Fork button in the top right corner.
+
+### How to Clone
+To clone the Todo2024:
+
+Log in (or sign up) to GitHub.
+Go to the repository for this project,[Todo2024 repository](https://github.com/angelaanjorin/Todo2024).
+Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
 # Testing
 
@@ -220,6 +237,9 @@ The testing was done using the Google Chrome Browser. Testing was also done usin
 
 ![After](https://res.cloudinary.com/dzesjeplp/image/upload/v1714851719/personalafterchange_erftbq.jpg)
 
+* A bug i could not fix due to time constrient was that after editing text in the content area, it is not explicitly clear to a user how the edited text will be saved. The enter key has no function here, which is something i would like to change in the future. By moving or clicking out of the text field the edited text is saved but i am aware that this is not eminent to the user.
+It is possible to edit even checked text. The line through and font color of grey remain as features even during the editing process.  
+
 
 ## Information Sources/Resources
 
@@ -230,7 +250,10 @@ The testing was done using the Google Chrome Browser. Testing was also done usin
 
 ## Content
 
-* All the text content is original. I got inspiration from the following projects:
+* All the text content is original. 
+
+## Code
+I got inspiration from the following projects:
     1. [yt-js-todo-2022 by TylerPottsDev](https://github.com/TylerPottsDev/yt-js-todo-2022)
     2. [Todo list tutorial by Gordon Chan](https://github.com/gorgorgordon/JS-To-do-List-App)
     3. [Tutorial from Dom from dcode](https://dev.to/dcodeyt)
