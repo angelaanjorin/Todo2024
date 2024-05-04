@@ -170,16 +170,17 @@ input:checked ~ .bubble::after {
 	background-color: #313154;
 }
 
-.filters{
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	background-color: #463c7b;
+#sortBtn, #pendingBtn, #revertBtn, #businessBtn, #personalBtn {
+    background-color: #463c7b;
 	border-radius: 5px;
 	border: 2px solid #e6b7eca1;
-	padding: 10px;
-	cursor: pointer;
+    padding: 5px;
+	cursor: pointer; 
+    color: #eee;
+    justify-content: center;
+    cursor: pointer;
 }
+
 .todo-list {
 	height: 300px;
 	overflow-y: scroll;
