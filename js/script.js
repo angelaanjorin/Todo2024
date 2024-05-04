@@ -6,9 +6,10 @@ window.addEventListener('load', () => {
     const newTodoForm = document.querySelector('#new-todo-form');
 
     newTodoForm.addEventListener('submit', e => {
+        console.log('submitting')
         try {
             console.log("pending");
-            a
+            
 
             e.preventDefault();
 
@@ -21,6 +22,8 @@ window.addEventListener('load', () => {
             }
 
             todos.push(todo);
+
+            console.log('todos in event listener', todos);
 
             localStorage.setItem('todos', JSON.stringify(todos));
 
@@ -36,7 +39,7 @@ window.addEventListener('load', () => {
     DisplayTodos(todos)
 })
 
-function DisplayTodos() {
+function DisplayTodos(todos) {
     const todoList = document.querySelector('#todo-list');
     todoList.innerHTML = "";
 
@@ -98,7 +101,7 @@ function DisplayTodos() {
                 todoItem.classList.remove('done');
             }
 
-            DisplayTodos()
+            DisplayTodos(todos)
 
 
         })
@@ -119,9 +122,11 @@ function DisplayTodos() {
         })
 
         deleteButton.addEventListener('click', (e) => {
+            console.log('todos in delete button event listener', todos);
             todos = todos.filter(t => t != todo);
+            console.log(todos);
             localStorage.setItem('todos', JSON.stringify(todos));
-            DisplayTodos()
+            DisplayTodos(todos)
         })
 
     })
@@ -133,7 +138,7 @@ function DisplayTodos() {
             return aDate - bDate;
         })
         todoList.innerHTML = "";
-        DisplayTodos()
+        DisplayTodos(todos)
     })
 
 
@@ -149,7 +154,7 @@ function DisplayTodos() {
         });
 
         todoList.innerHTML = "";
-        DisplayTodos();
+        DisplayTodos(todos);
     });
 
     businessBtn.addEventListener('click', (e) => {
@@ -165,7 +170,7 @@ function DisplayTodos() {
         });
 
         todoList.innerHTML = "";
-        DisplayTodos();
+        DisplayTodos(todos);
     });
 
     personalBtn.addEventListener('click', (e) => {
@@ -180,12 +185,12 @@ function DisplayTodos() {
         });
 
         todoList.innerHTML = "";
-        DisplayTodos();
+        DisplayTodos(todos);
     });
 
     revertBtn.addEventListener('click', (e) => {
         todos = JSON.parse(localStorage.getItem('todos')) || [];
-        DisplayTodos();
+        DisplayTodos(todos);
     });
 
 }  
